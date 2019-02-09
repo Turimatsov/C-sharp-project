@@ -16,7 +16,7 @@ namespace WindowsFormsApplication6
     {
         public Form6()
         {
-            InitializeComponent();
+            InitializeComponent(); this.ControlBox = false;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -82,6 +82,11 @@ namespace WindowsFormsApplication6
         private void button3_Click(object sender, EventArgs e)
         
         {           
+        }
+
+        private void Form6_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            new Form1().Show();
         }
     }
 }

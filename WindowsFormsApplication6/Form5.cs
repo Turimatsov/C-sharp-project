@@ -15,7 +15,7 @@ namespace WindowsFormsApplication6
     {
         public Form5()
         {
-            InitializeComponent();
+            InitializeComponent(); this.ControlBox = false;
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -65,6 +65,11 @@ namespace WindowsFormsApplication6
         private void button2_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void Form5_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            new Form1().Show();
         }
     }
 }

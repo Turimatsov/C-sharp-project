@@ -160,6 +160,7 @@
             this.Name = "Form6";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Последните 3 години";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form6_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 

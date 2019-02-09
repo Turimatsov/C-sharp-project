@@ -62,3 +62,4 @@ D:\1.Програми-всичко !!!!!!\Курсова-програмиран�
 D:\1.Програми-всичко !!!!!!\Курсова-програмиране-C#\Курсова-работа 106828\WindowsFormsApplication6\obj\Debug\WindowsFormsApplication6.csproj.CoreCompileInputs.cache
 D:\1.Програми-всичко !!!!!!\Курсова-програмиране-C#\Курсова-работа 106828\WindowsFormsApplication6\obj\Debug\WindowsFormsApplication6.exe
 D:\1.Програми-всичко !!!!!!\Курсова-програмиране-C#\Курсова-работа 106828\WindowsFormsApplication6\obj\Debug\WindowsFormsApplication6.pdb
+D:\1.Програми-всичко !!!!!!\Курсова-програмиране-C#\Курсова-работа 106828\WindowsFormsApplication6\obj\Debug\WindowsFormsApplication6.AdminForm.resources

@@ -15,13 +15,10 @@ namespace WindowsFormsApplication6
     {
         public Form4()
         {
-            InitializeComponent();
+            InitializeComponent(); this.ControlBox = false;
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
 
-        }
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -34,36 +31,55 @@ namespace WindowsFormsApplication6
             {
                 int redNomer = 0;
                 dataGridView1.Rows.Clear();
-                    DataTable dt = new DataTable();
-                    try
-                    {
-                        StreamReader streamReader = new StreamReader("DataTo.txt");
-                        dataGridView1.AllowUserToAddRows = false;
+                DataTable dt = new DataTable();
+                try
+                {
+                    StreamReader streamReader = new StreamReader("DataTo.txt");
+                    dataGridView1.AllowUserToAddRows = false;
 
-                        string text = "";
-                        for (text = streamReader.ReadLine(); text != null; text = streamReader.ReadLine())
-                        {
-                        string[] masiv = text.Split(new char[] {'-'});
-                        if (masiv[0] == textBox1.Text||masiv[2]==textBox2.Text)
-                        { dataGridView1.Rows.Add(++redNomer,masiv[0], masiv[1], masiv[2], masiv[3], masiv[4], masiv[5]); }
-                        }
-                        streamReader.Close();
+                    string text = "";
+                    for (text = streamReader.ReadLine(); text != null; text = streamReader.ReadLine())
+                    {
+                        string[] masiv = text.Split(new char[] { '-' });
+                        if (masiv[0] == textBox1.Text || masiv[2] == textBox2.Text)
+                        { dataGridView1.Rows.Add(++redNomer, masiv[0], masiv[1], masiv[2], masiv[3], masiv[4], masiv[5]); }
                     }
-                    catch (Exception err)
-                    { MessageBox.Show("Error" + err.Message); }
+                    streamReader.Close();
+                }
+                catch (Exception err)
+                { MessageBox.Show("Error" + err.Message); }
             }
         }
 
-        private void textBox1_MouseHover(object sender, EventArgs e)
-        {if (textBox1.Text == "Име на творбата") textBox1.Text = "";}
+        private void textBox1_Enter(object sender, EventArgs e)
+        { if (textBox1.Text == "Име на творбата") { textBox1.Text = ""; } textBox1.ForeColor = Color.Black; }
+
+        private void textBox1_Leave(object sender, EventArgs e)
+        { if (textBox1.Text == "") { textBox1.Text = "Име на творбата"; textBox1.ForeColor = Color.DarkGray; } }
+
+        private void textBox1_MouseEnter(object sender, EventArgs e)
+        { if (textBox1.Text == "Име на творбата") textBox1.Text = ""; textBox1.ForeColor = Color.Black; }
 
         private void textBox1_MouseLeave(object sender, EventArgs e)
-        {if (textBox1.Text == "") {textBox1.Text = "Име на творбата";}}
-
-        private void textBox2_MouseHover(object sender, EventArgs e)
-        {if (textBox2.Text == "Автор на творбата") textBox2.Text = "";}
+        { if (textBox1.Text == "") { textBox1.Text = "Име на творбата"; textBox1.ForeColor = Color.DarkGray; } }
+        private void textBox2_MouseEnter(object sender, EventArgs e)
+        { if (textBox2.Text == "Автор на творбата") { textBox2.Text = ""; textBox2.ForeColor = Color.Black; } }
 
         private void textBox2_MouseLeave(object sender, EventArgs e)
-        {if (textBox2.Text == "") { textBox2.Text = "Автор на творбата"; }}
+        {if (textBox2.Text == "") { textBox2.Text = "Автор на творбата"; textBox2.ForeColor = Color.DarkGray; } }
+        
+        private void textBox2_Enter(object sender, EventArgs e)
+        {if (textBox2.Text == "Автор на творбата") { textBox2.Text = ""; } textBox2.ForeColor = Color.Black;}
+
+        private void textBox2_Leave(object sender, EventArgs e)
+        {if (textBox2.Text == "") { textBox2.Text = "Автор на творбата"; textBox2.ForeColor = Color.DarkGray; }}
+
+        private void Form4_FormClosed(object sender, FormClosedEventArgs e)
+        { new Form1().Show(); }
+
+        private void button4_Click(object sender, EventArgs e)
+        { Close(); }
+
+        
     }
 }

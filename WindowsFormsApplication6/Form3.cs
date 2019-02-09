@@ -15,7 +15,7 @@ namespace WindowsFormsApplication6
     {
         public Form3()
         {
-            InitializeComponent();
+            InitializeComponent(); this.ControlBox = false;
             int redNomer = 0;
             dataGridView1.Rows.Clear();
             DataTable dt = new DataTable();
@@ -56,9 +56,7 @@ namespace WindowsFormsApplication6
             { MessageBox.Show("Error" + err.Message); }
 
         }
-        private void button1_Click(object sender, EventArgs e)
-        {
-        }
+        
         private void button3_Click(object sender, EventArgs e)
         {
             Close(); //exit
@@ -124,6 +122,11 @@ namespace WindowsFormsApplication6
             }
             catch (Exception err)
             { MessageBox.Show("Error" + err.Message); }
+        }
+
+        private void Form3_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            new Form1().Show();
         }
     }
 }

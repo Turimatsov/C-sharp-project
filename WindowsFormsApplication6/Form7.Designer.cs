@@ -163,6 +163,7 @@
             this.Name = "Form7";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TXT FILE";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form7_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
