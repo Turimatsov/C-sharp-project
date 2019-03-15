@@ -31,7 +31,7 @@ namespace WindowsFormsApplication6
         }
         private void timer1_Tick(object sender, EventArgs e)
         {
-            label1.Text = DateTime.Now.ToString("HH:mm:ss");
+            label1.Text = DateTime.Now.ToString("HH:MM:SS");
         }
         private void справкаПоЖанрToolStripMenuItem_Click(object sender, EventArgs e)
         {
